@@ -9,9 +9,20 @@ public final class App {
 
     /**
      * Says hello to the world.
+     * 
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // CollectionSortExample cs = new CollectionSortExample();
+        // cs.exmaple03();
+
+        // HashMap hm = new HashMap();
+        // hm.exmaple();
+
+        // HashTable ht = new HashTable();
+        // ht.exmaple();
+
+        ConcurrentHashMapExample ch = new ConcurrentHashMapExample();
+        ch.exmaple();
     }
 }
