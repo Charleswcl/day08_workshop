@@ -22,7 +22,13 @@ public final class App {
         // HashTable ht = new HashTable();
         // ht.exmaple();
 
-        ConcurrentHashMapExample ch = new ConcurrentHashMapExample();
-        ch.exmaple();
+        // ConcurrentHashMapExample ch = new ConcurrentHashMapExample();
+        // ch.exmaple();
+
+        // LinkedListExample lle = new LinkedListExample();
+        // lle.example();
+
+        StackedExample se = new StackedExample();
+        se.example();
     }
 }

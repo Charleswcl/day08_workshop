@@ -76,5 +76,8 @@ public class CollectionSortExample {
         employees.sort(Comparator.comparing(e -> e.getSalary()));
         System.out.println("Sorted employees (salary): " + employees);
 
+        // List<Employee> filteredEmployees = employees.stream().filter(e -> e.getFullName().equalsIgnoreCase("Charles").collect(Collectiors.toList));
+        // System.out.println("Filtered employees: " + filteredEmployees);
+
     }
 }
