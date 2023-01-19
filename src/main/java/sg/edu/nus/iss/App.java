@@ -5,19 +5,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Hello world!
- */
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * 
-     * @param args The arguments of the program.
-     * @throws IOException
-     */
     public static void main(String[] args) throws IOException {
         // CollectionSortExample cs = new CollectionSortExample();
         // cs.exmaple03();

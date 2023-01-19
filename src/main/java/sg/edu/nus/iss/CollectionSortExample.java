@@ -5,10 +5,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CollectionSortExample {
 
-    public void exmaple01(String[] args) {
+    public void exmaple01() {
 
         List<Integer> numbers = new ArrayList<Integer>();
 
@@ -29,7 +30,6 @@ public class CollectionSortExample {
 
         // print out in descending order
         System.out.println("Sort in descedning order: " + numbers);
-
     }
 
     public void example02() {
@@ -67,17 +67,22 @@ public class CollectionSortExample {
         employees.add(emp4);
         employees.add(emp5);
 
+        // print out unsored employee list
         System.out.println("Unsorted employees: " + employees);
 
+        // do an ascending sort using Collections
         Collections.sort(employees);
 
+        // print out sorted employees list
         System.out.println("Sorted Employees: " + employees);
 
+        // sorting using Comparator and lambda
         employees.sort(Comparator.comparing(e -> e.getSalary()));
         System.out.println("Sorted employees (salary): " + employees);
 
-        // List<Employee> filteredEmployees = employees.stream().filter(e -> e.getFullName().equalsIgnoreCase("Charles").collect(Collectiors.toList));
-        // System.out.println("Filtered employees: " + filteredEmployees);
+        List<Employee> filteredEmployees = employees.stream().filter(e -> e.getFullName().equalsIgnoreCase("Charles"))
+                .collect(Collectors.toList());
+        System.out.println("Filtered employees: " + filteredEmployees);
 
     }
 }
