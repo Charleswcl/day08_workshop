@@ -10,6 +10,10 @@ public final class App {
     }
 
     public static void main(String[] args) throws IOException {
+        
+        // ArraySortExample as = new ArraySortExample();
+        // as.example();
+
         // CollectionSortExample cs = new CollectionSortExample();
         // cs.exmaple03();
 
@@ -36,7 +40,7 @@ public final class App {
         boolean isDirCreated = newDir.mkdir();
 
         if (isDirCreated)
-            System.out.println("New Directory " + dirPath + " Create.");
+            System.out.println("New Directory " + dirPath + " Created.");
         else
             System.out.println("Directory " + dirPath + " Already Existed.");
 
@@ -49,12 +53,13 @@ public final class App {
         else
             System.out.println("File " + fileName + " already existed");
 
-        // lsit files under a directory
-        File fileListp[] = newDir.listFiles();
-        for (File f : fileListp) {
+        // list files under a directory
+        File fileList[] = newDir.listFiles();
+        for (File f : fileList) {
             System.out.println("File " + f.getPath() + ":" + f.getCanonicalPath());
         }
 
+        // Use FileoutputStream to write some integers to file 'data.txt'
         FileOutputStream fos = new FileOutputStream(newFile, true);
         for (int i = 0; i < 10; i++) {
             char str[] = Integer.toString(i).toCharArray();
@@ -64,7 +69,7 @@ public final class App {
 
         String welcomeMessage = "Welcome to ISS TFIP programme.";
 
-        // conver string to byte[] array using getBytes()
+        // convert string to byte[] array using getBytes()
         byte[] outputData = welcomeMessage.getBytes();
 
         // writing the string in byte array
@@ -74,7 +79,6 @@ public final class App {
         // clear the OutputStream
         // force the data to store to the file destination
         fos.flush();
-
         fos.close();
 
         String fileEmployee = "employee.txt";
@@ -92,6 +96,9 @@ public final class App {
         List<Employee> employeeList = cw.generateEmployees();
         cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
 
+        CSVReader cr = new CSVReader();
+        List<Employee> readEmployeeList = cr.readCSV(dirPath + File.separator + fileEmployee);
+        readEmployeeList.forEach(e -> System.out.println(e));
     }
 
 }

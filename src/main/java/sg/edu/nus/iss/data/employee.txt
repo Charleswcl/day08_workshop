@@ -1,4 +1,4 @@
 staffNo,fillName,department,role,emailAddress,salary
-88571,Tiffany,SS,Developer,30000
-74923,Charles,SS,Programmer,50000
-74234,Lucas,SS,AI Technician,90000
+88571,Tiffany,SS,Developer,tiffany@iss.nus.sg,30000
+74923,Charles,SS,Programmer,charles@iss.nus.sg,50000
+74234,Lucas,SS,AI Technician,lucas@iss.nus.sg,90000

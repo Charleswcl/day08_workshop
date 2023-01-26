@@ -17,7 +17,6 @@ public class CSVWriter {
 
         // create some employees
         Employee emp1 = new Employee("88571", "Tiffany", "SS", "Developer", "tiffany@iss.nus.sg", 30000);
-
         Employee emp2 = new Employee("74923", "Charles", "SS", "Programmer", "charles@iss.nus.sg", 50000);
         Employee emp3 = new Employee("74234", "Lucas", "SS", "AI Technician", "lucas@iss.nus.sg", 90000);
 
@@ -46,6 +45,8 @@ public class CSVWriter {
             fw.append(e.getDepartment());
             fw.append(COMMA_DELIMITER);
             fw.append(e.getRole());
+            fw.append(COMMA_DELIMITER);
+            fw.append(e.getEmailAddress());
             fw.append(COMMA_DELIMITER);
             fw.append(String.valueOf(e.getSalary()));
             fw.append(NEWLINE_SEPERATOR);
